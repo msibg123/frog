@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApplication3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="青蛙過街" Height="500" Width="1024" Icon="icon.ico" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="road.png" Stretch="Fill" Margin="0,17,0,-17"/>
+        <Image x:Name="horse" Margin="360,176,486,50" Source="cross.jpg" Stretch="Fill"/>
+        <Image x:Name="car1" Margin="870,176,10,226" Source="car-3.png" Stretch="Fill" RenderTransformOrigin="0.816,-0.716"/>
+        <Image x:Name="car2" Margin="1010,266,-151,131" Source="car-4.png" Stretch="Fill"/>
+        <Image x:Name="car3" Margin="-140,353,1021,50" Source="car-5.png" Stretch="Fill"/>
+        <Label x:Name="score" Content="0" HorizontalAlignment="Left" Margin="810,21,0,0" VerticalAlignment="Top" Height="94" Width="181" Foreground="White" FontSize="70" FontWeight="Bold"/>
+        <Label x:Name="time" Content="30" HorizontalAlignment="Left" Margin="241,32,0,0" VerticalAlignment="Top" Height="94" Width="132" Foreground="White" FontSize="70" FontWeight="Bold"/>
+        <Label x:Name="lab" Content="時間：" HorizontalAlignment="Left" Margin="19,32,0,0" VerticalAlignment="Top" Height="94" Width="222" Foreground="White" FontSize="70" FontWeight="Bold"/>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="遊戲秒數(_T)">
+                <MenuItem Header="10秒" Click="MenuItem_Click_3"/>
+                <MenuItem Header="20秒" Click="MenuItem_Click_4"/>
+                <MenuItem Header="30秒" Click="MenuItem_Click_5"/>
+            </MenuItem>
+            <MenuItem Header="遊戲難度(_D)">
+                <MenuItem Header="簡單" Click="MenuItem_Click_6"/>
+                <MenuItem Header="中等" Click="MenuItem_Click_7"/>
+                <MenuItem Header="困難" Click="MenuItem_Click_8"/>
+            </MenuItem>
+            <MenuItem Header="關於(_A)">
+                <MenuItem Header="關於遊戲(_G)" Click="MenuItem_Click"/>
+                <MenuItem Header="關於團隊(_T)" Click="MenuItem_Click_1"/>
+                <MenuItem Header="結束遊戲(_X)" Click="MenuItem_Click_2"/>
+            </MenuItem>
+        </Menu>
+        <Label Content="最高分：" HorizontalAlignment="Left" Margin="615,102,0,0" VerticalAlignment="Top" FontSize="40"/>
+        <Label x:Name="tv_max_score" Content="10" HorizontalAlignment="Left" Margin="785,102,0,0" VerticalAlignment="Top" FontSize="40" Width="157"/>
+        <Image x:Name="frog" Margin="410,59,510,311" Source="frog-1.png" Stretch="Fill"/>
+
+    </Grid>
+</Window>
